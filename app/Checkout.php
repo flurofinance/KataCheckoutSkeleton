@@ -21,12 +21,8 @@ class Checkout {
     {
         $totalPrice = 0;
         foreach ($this->scannedItems as $item) {
-//            if (isset($this->pricingRules[$item])) {
-                $unitPrice = $this->pricingRules[$item];
-                $totalPrice += $this->applySpecialRules($item, $unitPrice);
-//            } else {
-//                echo "Warning: Item '$item' not found in pricing rules.\n";
-//            }
+            $unitPrice = $this->pricingRules[$item];
+            $totalPrice += $this->applySpecialRules($item, $unitPrice);
         }
         return $totalPrice;
     }
