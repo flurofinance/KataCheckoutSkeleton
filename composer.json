@@ -1,0 +1,16 @@
+{
+  "name": "mak/kata",
+  "description": "A sample supermarket checkout calculator.",
+  "license": "MIT",
+  "type": "project",
+  "require": {
+    "php": "^8.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11"
+  },
+  "scripts": {
+    "tests": "phpunit -c phpunit.xml",
+    "run-app": "php app/Checkout.php"
+  }
+}
