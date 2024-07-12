@@ -7,7 +7,7 @@ services:
     volumes:
       - .:/KataCheckout
     working_dir: /KataCheckout
-    command: sh -c "composer install --prefer-dist && tail -f /dev/null"
+    command: sh -c "composer install --prefer-dist && composer dump-autoload && tail -f /dev/null"
     environment:
       - PHP_INI_DISPLAY_ERRORS=1
       - PHP_INI_MEMORY_LIMIT=512M

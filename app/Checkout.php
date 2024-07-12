@@ -1,5 +1,7 @@
 <?php
 
+namespace app;
+
 class Checkout {
     private array $pricingRules;
     private array $scannedItems;
@@ -19,12 +21,12 @@ class Checkout {
     {
         $totalPrice = 0;
         foreach ($this->scannedItems as $item) {
-            if (isset($this->pricingRules[$item])) {
+//            if (isset($this->pricingRules[$item])) {
                 $unitPrice = $this->pricingRules[$item];
                 $totalPrice += $this->applySpecialRules($item, $unitPrice);
-            } else {
-                echo "Warning: Item '$item' not found in pricing rules.\n";
-            }
+//            } else {
+//                echo "Warning: Item '$item' not found in pricing rules.\n";
+//            }
         }
         return $totalPrice;
     }

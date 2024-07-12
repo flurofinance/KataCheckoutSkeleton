@@ -5,6 +5,4 @@ WORKDIR /app
 
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 
-RUN
-
 CMD [ "php", "./app/Checkout.php" ]
